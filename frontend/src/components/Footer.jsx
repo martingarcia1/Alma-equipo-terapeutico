@@ -1,4 +1,5 @@
 import { contacto, navegacion } from '../data'
+import Icon from './Icon'
 
 function Footer() {
   return (
@@ -43,9 +44,33 @@ function Footer() {
         </div>
       </div>
 
-      <p className="mx-auto mt-14 max-w-6xl border-t border-crema/15 px-5 pt-6 text-center text-sm text-crema/60">
-        © {new Date().getFullYear()} ALMA Equipo Terapéutico
-      </p>
+      <div className="mx-auto mt-14 flex max-w-6xl flex-col items-center justify-between gap-3 border-t border-crema/15 px-5 pt-6 text-center text-sm text-crema/60 md:flex-row md:text-left">
+        <p>© {new Date().getFullYear()} ALMA Equipo Terapéutico</p>
+
+        <p>
+          Desarrollado por{' '}
+          <a
+            href="https://www.sergiomartin.com.ar"
+            target="_blank"
+            rel="noreferrer"
+            title="Desarrollador de Software"
+            className="font-semibold text-crema/80 transition-colors hover:text-terracota-claro"
+          >
+            Sergio Martín García
+          </a>
+          <span className="mx-2 text-crema/30">·</span>
+          <a
+            href="https://www.instagram.com/juda.solutions/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram de Juda Solutions"
+            className="inline-flex items-center gap-1 align-middle transition-colors hover:text-terracota-claro"
+          >
+            <Icon name="instagram" size={16} />
+            juda.solutions
+          </a>
+        </p>
+      </div>
     </footer>
   )
 }
